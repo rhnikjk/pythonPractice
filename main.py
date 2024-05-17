@@ -11,7 +11,7 @@ QUESTIONS = ["first question: what is 1+1", "second question: how many tenticles
 OPTIONS = [["2", "3", "1"], ["8", "1", "7"], ["426mph", "478mph", "443mph"], ["1894", "1942", "1856"], ["5.2kph", "4.8kph", "4.5kph"], 
            ["Jeff Bezos", "Elon Musk", "Bernard Arnault"], ["22", "21", "20"], ["2019", "2020", "2021"], ["1914", "1915", "1916"], ["32", "34", "36"]]
 SHORT_OPTIONS = ["a", "b", "c"]
-ANSWERS = [2,3,1,3,2,3,3,1,1,1]
+ANSWERS = [1,2,0,2,1,2,2,0,0,0]
 play = "yes"
 
 
@@ -51,9 +51,8 @@ while(play == "yes" or play == "y"):
     #Ask the user a question
     for i in range(len(QUESTIONS)):
         questionAttempts = attempts
-        while questionAttempts > 0:
-            answer = input(QUESTIONFORMAT.format(QUESTIONS[i], OPTIONS[i][0],
-                                                 OPTIONS[i][1], OPTIONS[i][2])).lower()
+        while(questionAttempts > 0):
+            answer = input(QUESTIONFORMAT.format(QUESTIONS[i], OPTIONS[i][0], OPTIONS[i][1], OPTIONS[i][2])).lower()
             if answer == OPTIONS[i][ANSWERS[i]] or answer == SHORT_OPTIONS[ANSWERS[i]]:
                 score += 10 - skillLevel
                 print("correct\n score = ", score)
