@@ -1,5 +1,5 @@
 
-#Greet the user and introduce the quiz
+#Greet the user and introduce the quizN
 import random
 QUESTIONFORMAT = "{}\na. {}\nb. {}\nc. {}\n"
 GOODCOMMENTS = ["nice", "good job", "wow, so good", "great", "sigma as flip"]
