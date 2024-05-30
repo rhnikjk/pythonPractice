@@ -32,9 +32,8 @@ score = 0
 for i in range(len(ANSWERS)):
     i=b
     x=i+1
-    print("name the top ",x)
-    answer = input("biggest contry\n")
-    if answer == ANSWERS[i]:
+    answer = input("name one of the 50 biggest contrys\n")
+    if inlist(answer,ANSWERS):
         print("correct")
         b += 1
     else:
